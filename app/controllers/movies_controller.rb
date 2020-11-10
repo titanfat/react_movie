@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
   def index
-    @movie = Time.now
+    @movie = [ "Железный человек", "Супермен" ,"Человек-паук" ]
   end
 end
