@@ -1,0 +1,20 @@
+header
+  h1
+    | Reviews for..
+    =  link_to(@movie.title, @movie)
+  ol
+    - @reviews.each do |review|
+      li
+        span
+          = pluralize(review.stars, 'star')
+          span
+            |  by..
+            = review.name
+            br
+            span
+              =   time_ago_in_words(review.created_at)
+              |     ago
+        p
+          |  "
+          = review.comment
+          | "

@@ -1,0 +1,35 @@
+article
+  header
+  h3
+    | Image
+  = image_for(@movie)
+    h1 #{@movie.title}
+  header
+    h2 Description
+    p
+      = @movie.description
+    h3 Rating
+    p
+      = @movie.rating
+    h3 Released On
+    p
+      = @movie.released_on
+    h3 Total Gross
+    p
+      = format_total_gross(@movie)
+    h3 Cast
+    p
+      = @movie.cast
+    h3 Director
+    p
+      = @movie.director
+    h3 Duration
+    p
+      = @movie.duration
+= link_to pluralize(@movie.reviews.size, "Reviews"), movie_reviews_path(@movie)
+br
+= link_to "All movies", root_path
+br
+= link_to "Edit", edit_movie_path
+br
+= button_to "Delete", movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' }
