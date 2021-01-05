@@ -1,24 +1,12 @@
-# README
+# IMDB clone.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Used:
 
-Things you may want to cover:
+* Rails 6
 
-* Ruby version
+* Slim, simple form
 
-* System dependencies
+* React rails gem
 
-* Configuration
+* Unit test: Rspec-rails
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
